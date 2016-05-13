@@ -8,3 +8,8 @@
   * [Conditions](conditions) 
   * [Repeater](repeater)
   * [Flexible Content](flexible-content)
+
+### Advanced
+* [Composing Fields](composing-fields)
+* [Modifying Fields](fields#modifying-fields)
+
