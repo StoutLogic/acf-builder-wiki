@@ -31,4 +31,4 @@ $banner
         ->condition('add_title', '==', '1')
             ->and('title_color', '==', 'white');
 ```
-This will display the Title Background Options only if a title is available and the title text color is white.
+This will display the Title Background Options only if a title is available and the title text color is white.  The logic probably won't be as complex as field group locations logic, but it is there if needed.
