@@ -22,8 +22,9 @@ Here is an example of a simple slider. The slider itself has a title, and then t
         'type' => 'text',
     ],
     [
-        ...,
+        'key' => 'field_slides',
         'name' => 'slides',
+        'label' => 'Slides',
         'type' => 'repeater',
         'sub_fields' => [
             [
