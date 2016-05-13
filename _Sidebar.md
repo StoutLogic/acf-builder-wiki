@@ -5,6 +5,7 @@
   * [Location](location)
 *  [Fields](fields)
   * [Tabs](tabs)
+  * [Choices](choices)
   * [Conditions](conditions) 
   * [Repeater](repeater)
   * [Flexible Content](flexible-content)
