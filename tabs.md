@@ -36,3 +36,11 @@ The `name` and `key` will have `'_tab'` appended their values.
 ACF provides a [placement](https://www.advancedcustomfields.com/resources/tab/#settings) setting for 'top' (default) or 'left'. Note 'left' will be ignored if the field group.
 
 ACF also provides an `endpoint` setting to denote that a tab is the start of a new row or group of tabs. If the field group has a lot of tabs this may be helpful. It can either be passed in as an option like placement, or the `endPoint()` function can be called after `addTab()`.
+```php
+$banner
+   ->addTab('Content')
+   ...
+   ->addTab('Settings')
+       ->endPoint()
+   ...
+```
