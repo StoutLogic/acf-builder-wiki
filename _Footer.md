@@ -1,0 +1,1 @@
+&copy; Stout Logic, LLC
