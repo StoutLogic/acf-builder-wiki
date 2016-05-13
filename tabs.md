@@ -13,7 +13,7 @@ $banner
     ->addImage('background_image')
     ->addColorPicker('background_color');
 ```
-`->addTab('Content')` will generate:
+`addTab('Content')` will generate:
 ```php
 [
     'key' => 'field_content_tab',
@@ -22,7 +22,7 @@ $banner
     'type' => 'tab'
 ]
 ```
-`->addTab('Background Settings')` will generate:
+`addTab('Background Settings')` will generate:
 ```php
 [
     'key' => 'field_background_settings_tab',
