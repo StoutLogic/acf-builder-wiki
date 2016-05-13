@@ -13,3 +13,6 @@
 * [Composing Fields](composing-fields)
 * [Modifying Fields](fields#modifying-fields)
 
+### Usage
+* [Installing](installing)
+* [Using](using)
