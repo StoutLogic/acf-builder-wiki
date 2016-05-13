@@ -16,8 +16,63 @@ use StoutLogic\AcfBuilder\FieldsBuilder;
 $background = new FieldsBuilder('background');
 $background
     ->addImage('background_image', ['preview_size' => 'medium'])
-    ->addTrueFalse('fixed', [
+    ->addTrueFalse('background_fixed', [
+        'label' => 'Fixed',
         'instructions' => "Check to add a parallax effect where the background image doesn't move when scrolling"
       ])
     ->addColorPicker('background_color', ['default' => '#ffffff']);
 ```
+`$background->build();` Will generate:
+```php
+[
+    'key' => 'group_background',
+    'title' => 'Background',
+    'fields' => [
+        [
+            'key' => 'field_background_image',
+            'name' => 'background_image',
+            'label' => 'Background Image',
+            'type' => 'image',
+            'preview_size' => 'medium'
+        ],
+        [
+            'key' => 'field_background_fixed',
+            'name' => 'background_fixed',
+            'label' => 'Fixed',
+            'type' => 'true_false',
+            'instructions' => "Check to add a parallax effect where the background image doesn't move when scrolling"
+        ],
+        [
+            'key' => 'field_background_color',
+            'name' => 'background_color',
+            'label' => 'Background Color',
+            'type' => 'color_picker',
+            'default' => '#ffffff'
+        ],
+    ]
+]
+```
+Notice how the `key`, `name` and `label` values are automatically populated based on the name passed into the field. Much like the [FieldGroups](../Field-Groups#acf-builder-field-group-defaults) generates defaults based on the name. `key` will prepend `key_`, `name` will be the same, and `label` will get title cased and the underscores replaced with spaces.
+
+The `type` setting is automatically generated based on the `addField` method used.
+
+We also passed in some optional configuration arguments for each field. Including overwriting the default label for the `background_fixed` field.
+
+Some of these configurations are very often used, so there are some declarative shortcut functions for them. They are:
+* `default($value)`
+* `required($value = true)` true by default, you can pass in false if you needed to unrequire it
+* `instructions($value)`
+
+The above can be rewritten to be:
+```php
+use StoutLogic\AcfBuilder\FieldsBuilder;
+
+$background = new FieldsBuilder('background');
+$background
+    ->addImage('background_image', ['preview_size' => 'medium'])
+    ->addTrueFalse('background_fixed', ['label' => 'Fixed'])
+        ->instructions("Check to add a parallax effect where the background image doesn't move when scrolling")
+    ->addColorPicker('background_color')
+        ->default('#ffffff');
+```
+
