@@ -33,7 +33,7 @@ Generates:
     'style' => 'seamless',
 ]
 ```
-We can also modify the group configuration after instantiating the object using the `->setGroupConfig($key, $value)` method.
+You can also modify the group configuration after instantiating the object using the `->setGroupConfig($key, $value)` method.
 ```php
 $banner->setGroupConfig('position', 'acf_after_title');
 ```
