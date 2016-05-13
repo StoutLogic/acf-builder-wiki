@@ -13,7 +13,7 @@ $colors
 The above will show a text box if 'other' is selected from color, otherwise it will not be displayed in the admin.
 
 ## Complex Logic
-Fields can be made visible or hidden based on more complex logic. The same rules apply as they are in the [field group locations](location#complex-logic)
+Fields can be made visible or hidden based on more complex logic. The same rules apply as for [field group locations](location#complex-logic)
 ```php
 use StoutLogic\AcfBuilder\FieldsBuilder;
 
