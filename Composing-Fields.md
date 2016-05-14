@@ -14,8 +14,8 @@ $backgroundSettings
     ->addColorPicker('background_color');
 
 /**
- * Columns has multiple columns with individual backgrounds, 
- * and the entire columns section can have a background 
+ * Columns fields have multiple columns with individual backgrounds, 
+ * and then the entire columns section can have a background.
  */
 $columns = new FieldsBuilder('columns');
 $columns
