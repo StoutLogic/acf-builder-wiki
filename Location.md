@@ -1,7 +1,7 @@
 # Location
 Field groups won't do any good if they don't belong to any locations. [By default](https://www.advancedcustomfields.com/resources/register-fields-via-php/#group-settings), ACF will apply a field group to all `post` type post_types.
 
-To change this default configuration, use the `FieldBuilders->setLocation($param, $operation, $value)` method.
+To change this default configuration, use the `FieldsBuilders->setLocation($param, $operation, $value)` method.
 ```php
 use StoutLogic\AcfBuilder\FieldsBuilder;
 
