@@ -52,9 +52,9 @@ $sections
     ->setLocation('page_template', '==', 'default');
 
 /**
- * About template has specific sections only for the about page. It will
- * list all the team members. It has an intro section and has a configurable
- * background.
+ * About template has a special Team Members sections only for the about page. 
+ * It will list all the team members. It has an intro section and has a
+ * configurable background.
  */
 $aboutSections = new FieldsBuilder('about_sections')
 $aboutSections
