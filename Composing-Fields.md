@@ -11,7 +11,7 @@ $backgroundSettings = new FieldsBuilder('background_settings');
 $backgroundSettings
     ->addImage('background_image')
     ->addTrueFalse('background_image_fixed')
-    ->addColorPicker('background_color);
+    ->addColorPicker('background_color');
 
 $banner = new FieldsBuilder('banner');
 $banner
