@@ -20,12 +20,12 @@ $backgroundSettings
 $columns = new FieldsBuilder('columns');
 $columns
     ->addTab('Columns')
-    ->addRepeater(columns, ['min' => 1, 'max' => 3])
-        ->addTab('Content')
-            ->addWysiwyg('content')
-        ->addTab('Background')
-            ->addFields($backgroundSettings)
-        ->endRepeater()
+        ->addRepeater(columns, ['min' => 1, 'max' => 3])
+            ->addTab('Content')
+                ->addWysiwyg('content')
+            ->addTab('Background')
+                ->addFields($backgroundSettings)
+            ->endRepeater()
 
      ->addTab('Background')
          ->addFields($backgroundSettings);
