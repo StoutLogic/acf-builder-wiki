@@ -50,7 +50,7 @@ $content
     ->addFlexibleContent('sections')
         ->addLayout('content_columns')
             ->addRepeater('columns', ['min' => 1, 'max' => 2])
-                ->addFlexibleContent('column_type')
+                ->addFlexibleContent('column_type', ['min' => 1, 'max' => 1])
                     ->addLayout('copy')
                         ->addWysiwyg('content')
                     ->addLayout('image')
