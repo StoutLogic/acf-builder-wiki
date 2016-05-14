@@ -13,15 +13,41 @@ $backgroundSettings
     ->addTrueFalse('background_image_fixed')
     ->addColorPicker('background_color');
 
+/**
+ * Columns has multiple columns with individual backgrounds, 
+ * and the entire columns section can have a background 
+ */
+$columns = new FieldsBuilder('columns');
+$columns
+    ->addTab('Columns')
+    ->addRepeater(columns, ['min' => 1, 'max' => 3])
+        ->addTab('Content')
+            ->addWysiwyg('content')
+        ->addTab('Background')
+            ->addFields($backgroundSettings)
+        ->endRepeater()
+
+     ->addTab('Background')
+         ->addFields($backgroundSettings);
+
+/**
+ * A Banner on top of every page 
+ */
 $banner = new FieldsBuilder('banner');
 $banner
-    ->addTab('Content')
-        ->addText('title')
-        ->addTextarea('content')
-    ->addTab('Background')
-        ->addFields($backgroundSettings)
+    ->addRepeater('slides', ['min' => 1])
+        ->addFields($columns)
     ->setLocation('post_type', '==', 'page');
 
+/**
+ * Sections go below a banner, additional banners can be added as a section
+ */
+$sections = new FieldsBuilder('sections')
+$sections
+    ->addFlexibleContent('sections')
+       ->addLayout($banner)
+       ->addLayout($columns)
+    ->setLocation('post_type', '==', 'page');
 ```
 
 ## Mutability
