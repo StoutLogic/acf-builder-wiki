@@ -1,0 +1,11 @@
+# Installing
+
+### Composer
+Easiest way to install ACF Builder is to use composer. Read more about [composer](https://getcomposer.org/doc/00-intro.md) and how to [utilize it with WordPress](http://composer.rarst.net).
+
+```
+composer install stoutlogic/acf-builder
+```
+
+### Manual
+You can manually install ACF Builder, if you checkout or copy it to your theme or plugin. Be sure to require autoload.php in your functions.php file so that the classes will be autoloader.
