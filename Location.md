@@ -39,10 +39,10 @@ $banner
     ->addWysiwyg('content')
     ->setLocation('post_type', '==', 'page')
         ->or('post_type', '==', 'post')
-        ->and('post_id', '!=', '10')
+        ->and('post', '!=', '10')
     ->addText('subtitle');
 ```
-This logic says that the banner should appear on a page or a post, and that post can't have a post_id of 10. Also notice that `setLocation` doesn't have to be added last.
+This logic says that the banner should appear on a page or a post, and that post can't have a post id of 10. Also notice that `setLocation` doesn't have to be added last.
 `$banner->build` will generate:
 ```php
 ...,
@@ -75,7 +75,7 @@ This logic says that the banner should appear on a page or a post, and that post
             'value' => 'post',
         ],
         [
-            'param' => 'post_id',
+            'param' => 'post',
             'operator'  =>  '!=',
             'value' => '10',
         ],
