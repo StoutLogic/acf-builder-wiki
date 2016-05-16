@@ -20,7 +20,7 @@ $background
         'label' => 'Fixed',
         'instructions' => "Check to add a parallax effect where the background image doesn't move when scrolling"
       ])
-    ->addColorPicker('background_color', ['default' => '#ffffff']);
+    ->addColorPicker('background_color', ['default_value' => '#ffffff']);
 ```
 `$background->build();` Will generate:
 ```php
@@ -59,7 +59,7 @@ The `type` setting is automatically generated based on the `addField` method use
 We also passed in some optional configuration arguments for each field. Including overwriting the default label for the `background_fixed` field.
 
 Some of these configurations are very often used, so there are some declarative shortcut functions for them. They are:
-* `default($value)`
+* `defaultValue($value)`
 * `required($value = true)` true by default, pass in false to unrequire it
 * `instructions($value)`
 
@@ -73,7 +73,7 @@ $background
     ->addTrueFalse('background_fixed', ['label' => 'Fixed'])
         ->instructions("Check to add a parallax effect where the background image doesn't move when scrolling")
     ->addColorPicker('background_color')
-        ->default('#ffffff');
+        ->defaultValue('#ffffff');
 ```
 Any field configuration in this style using `setConfig($key, $value)` This is useful if the field was already declared and you wanted to change the configuration.
 
@@ -82,7 +82,7 @@ Assume the background field is already defined and a field needed to be modified
 ```php
 $background
     ->getFieldByName('background_fixed')
-    ->default(true)
+    ->defaultValue(true)
     ->setConfig('label', 'Fixed Parallax Effect');
 ``` 
 Will change background field group config to be:
