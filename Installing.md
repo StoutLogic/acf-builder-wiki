@@ -1,5 +1,8 @@
 # Installing
 
+### Requirements
+PHP 5.5 or later are required
+
 ### Composer
 Easiest way to install ACF Builder is to use composer. Read more about [composer](https://getcomposer.org/doc/00-intro.md) and how to [utilize it with WordPress](http://composer.rarst.net).
 
