@@ -20,7 +20,7 @@ $backgroundSettings
 $columns = new FieldsBuilder('columns');
 $columns
     ->addTab('Columns')
-        ->addRepeater('columns', ['min' => 1, 'max' => 3])
+        ->addRepeater('columns', ['min' => 1, 'max' => 3, 'layout' => 'block'])
             ->addTab('Content')
                 ->addWysiwyg('content')
             ->addTab('Background')
@@ -35,7 +35,7 @@ $columns
  */
 $banner = new FieldsBuilder('banner');
 $banner
-    ->addRepeater('slides', ['min' => 1])
+    ->addRepeater('slides', ['min' => 1, 'layout' => 'block'])
         ->addFields($columns)
     ->setLocation('post_type', '==', 'page');
 
