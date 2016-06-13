@@ -78,41 +78,5 @@ $background
 Any field configuration in this style using `setConfig($key, $value)` This is useful if the field was already declared and you wanted to change the configuration.
 
 ## Modifying Fields
-Assume the background field is already defined and a field needed to be modified. The `getFieldByName($name)` method can be used.
-```php
-$background
-    ->getFieldByName('background_fixed')
-    ->defaultValue(true)
-    ->setConfig('label', 'Fixed Parallax Effect');
-``` 
-Will change background field group config to be:
-```php
-[
-    'key' => 'group_background',
-    'title' => 'Background',
-    'fields' => [
-        [
-            'key' => 'field_background_image',
-            'name' => 'background_image',
-            'label' => 'Background Image',
-            'type' => 'image',
-            'preview_size' => 'medium'
-        ],
-        [
-            'key' => 'field_background_fixed',
-            'name' => 'background_fixed',
-            'label' => 'Fixed Parallax Effect',
-            'type' => 'true_false',
-            'instructions' => "Check to add a parallax effect where the background image doesn't move when scrolling"
-            'default_value' => true,
-        ],
-        [
-            'key' => 'field_background_color',
-            'name' => 'background_color',
-            'label' => 'Background Color',
-            'type' => 'color_picker',
-            'default_value' => '#ffffff'
-        ],
-    ]
-]
+Coming Soon
 ```
