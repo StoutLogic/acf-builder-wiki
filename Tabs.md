@@ -44,3 +44,11 @@ $banner
        ->endPoint()
    ...
 ```
+
+### Note about using Tabs with Repeaters
+By default repeaters will utilize a table layout. Tabs won't work correctly and will break the UI in a table layout repeater. Be sure to set the layout to block or row:
+```php
+...
+    ->addRepeater('columns', ['layout' => 'block']
+...
+```
