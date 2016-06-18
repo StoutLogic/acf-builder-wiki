@@ -4,6 +4,7 @@ A powerful ability that ACF Builder has is the ability to compose field groups f
 ## Write once use everywhere 
 A common use case for composing fields is to create a FieldsBuilder that never gets used by itself, but can be used in other FieldsBuilder. Background Settings is a good example of this. Pages can consist of banners, sliders, sections, columns, etc. Each of these potentially could have a configurable background.
 
+The `addFields` method will take a `FieldsBuilder` as an argument, and add the fields from that `FieldsBuilder` to another `FieldsBuilder`.
 ```php
 use StoutLogic\AcfBuilder\FieldsBuilder;
 
@@ -69,7 +70,6 @@ $aboutSections
                ->addFields($background_settings)
     ->setLocation('page_template', '==', 'about');
 ```
-The `addFields` method will take a `FieldsBuilder` as an argument, and add the fields from that `FieldsBuilder` to another `FieldsBuilder`.
 
 ## Mutability
 One thing to keep in mind is that the FieldsBuilder is mutable. Meaning that when addField or setConfig is called, it changes the object in place. Calling `build` on a FieldsBuilder will not _lock in_ the fields or config. `build` only outputs a config array for the FieldsBuilder at that particular moment in time. So the array is _locked in_ but the FieldsBuilder is not.
