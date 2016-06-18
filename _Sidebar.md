@@ -12,7 +12,7 @@
 
 ### Advanced
 * [Composing Fields](composing-fields)
-* [Modifying Fields](fields#modifying-fields)
+* [Modifying Fields](modifying-fields)
 
 ### Usage
 * [Installing](installing)
