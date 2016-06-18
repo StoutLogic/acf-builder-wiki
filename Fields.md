@@ -76,7 +76,3 @@ $background
         ->defaultValue('#ffffff');
 ```
 Any field configuration in this style using `setConfig($key, $value)` This is useful if the field was already declared and you wanted to change the configuration.
-
-## Modifying Fields
-Coming Soon
-```
