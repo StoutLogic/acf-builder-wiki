@@ -10,7 +10,7 @@ $fieldsBuilder
 If the field 'title' doesn't exist, a `FieldNotFoundException` will be thrown.
 
 ## Insert Fields After a Particular Field
-A more powerful way to modify a field is to pass in a closure instead of an config array to `modifyField`. The following example will change the label of the title field and add a sub title field after the title field, but before the `content` field:
+A more powerful way to modify a field is to pass in a closure instead of an config array to `modifyField`. The following example will change the label of the title field and add a `sub_title` field after the title field, but before the `content` field:
 ```php
 $builder = new FieldsBuilder('Banner');
     $builder
