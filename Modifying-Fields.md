@@ -27,7 +27,7 @@ $builder = new FieldsBuilder('Banner');
 ```
 The closure must except a new `FieldsBuilder` object which will have the field 'title' already initialized as the only field. From their, the field's configuration can be modified, as well as fields added after it. This function also must return a `FieldsBuilder`. The original `title` field will have its contents replaced with these built fields. 
 
-`modifyField` will return an instance to the original builder, so additional fields can be added after `content`, in this case a `footnote`s textarea.
+`modifyField` will return an instance to the original builder, so additional fields can be added after `content`, in this case a `footnotes` textarea.
 
 If the closure passed to modifyField doesn't return a `FieldsBuilder`, a `ModifyFieldReturnTypeException` will be thrown.
 
