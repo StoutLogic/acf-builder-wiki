@@ -1,7 +1,7 @@
 # Modifying Fields
 When composing fields from other fields, some tweaks might need to be made to fit the use case. That might mean modifying the configuration of a field, adding additional fields, or even removing a field.
 
-## Modifying a field's configuration
+## Modifying a Field's Configuration
 The simplest way to modify a field's configuration is to call `modifyField`, and passing in the name of the field to be modified, and the modified field config as an array. The following example will change the label of a title field:
 ```php
 $fieldsBuilder
@@ -10,7 +10,7 @@ $fieldsBuilder
 If the field 'title' doesn't exist, a `FieldNotFoundException` will be thrown.
 
 ## Insert Fields After a Particular Field
-A more powerful way to modify a field is to pass in a closure instead of an config array to `modifyField`. The following example will change the label of the title field and add a `sub_title` field after the title field, but before the `content` field:
+A more powerful way to modify a field is to pass in a closure instead of a config array to `modifyField`. The following example will change the label of the title field and add a `sub_title` field after the title field, but before the `content` field:
 ```php
 $builder = new FieldsBuilder('Banner');
     $builder
