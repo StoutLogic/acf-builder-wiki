@@ -13,6 +13,7 @@
 ### Advanced
 * [Composing Fields](composing-fields)
 * [Modifying Fields](modifying-fields)
+* [Generated Keys](generated-keys)
 
 ### Usage
 * [Installing](installing)
