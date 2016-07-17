@@ -24,3 +24,5 @@ The last field in the above example will have the key: `field_page_content_secti
 This provides a logical semantic naming scheme for keys. They will be unique because the names of fields need to be unique. It mirrors how ACF stores fields name in the database.
 
 A user of ACF Builder shouldn't have to worry about key names, but if the user ever needs to know what the key for a particular field is, they should be able to logically deduce it.
+
+**Note:** if composing fields with `addFields` see [this](composing-fields#generated-keys).
