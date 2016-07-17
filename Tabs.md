@@ -16,7 +16,7 @@ $banner
 `addTab('Content')` will generate:
 ```php
 [
-    'key' => 'field_content_tab',
+    'key' => 'field_banner_content_tab',
     'name' => 'content_tab',
     'label' => 'Content',
     'type' => 'tab'
@@ -25,7 +25,7 @@ $banner
 `addTab('Background Settings')` will generate:
 ```php
 [
-    'key' => 'field_background_settings_tab',
+    'key' => 'field_banner_background_settings_tab',
     'name' => 'background_settings_tab',
     'label' => 'Background Settings',
     'type' => 'tab'
