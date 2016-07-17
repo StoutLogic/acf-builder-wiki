@@ -23,19 +23,19 @@ add_action('acf/init', function() use ($banner) {
     'title' => 'Banner',
     'fields' => [
         [
-            'key' => 'field_title',
+            'key' => 'field_banner_title',
             'name' => 'title',
             'label' => 'Title',
             'type' => 'text'
         ],
         [
-            'key' => 'field_content',
+            'key' => 'field_banner_content',
             'name' => 'content',
             'label' => 'Content',
             'type' => 'wysiwyg'
         ],
         [
-            'key' => 'field_background_image',
+            'key' => 'field_banner_background_image',
             'name' => 'background_image',
             'label' => 'Background Image',
             'type' => 'image'
