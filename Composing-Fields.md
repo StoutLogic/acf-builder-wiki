@@ -75,3 +75,8 @@ $aboutSections
 One thing to keep in mind is that the FieldsBuilder is mutable. Meaning that when addField or setConfig is called, it changes the object in place. Calling `build` on a FieldsBuilder will not _lock in_ the fields or config. `build` only outputs a config array for the FieldsBuilder at that particular moment in time. So the array is _locked in_ but the FieldsBuilder is not.
 
 When adding a FieldsBuilder to another FieldsBuilder with `addFields` or `addLayout`, that FieldsBuilder is cloned, which will _lock in_ the fields and configs. So updating those fields at a later time on the original FieldsBuilder will not have an effect on the cloned versions. These cloned copies embedded in other FieldsBuilder can still be updated separately, so they are still mutable.
+
+## Generated Keys
+When using `addFields` to add the fields of Field Group A to Field Group B, the newly added fields on Field Group B will not retain their name spacing based on Field Group A's name. Instead they will be namespace with Field Group B's name.
+
+However, when adding a Field Group to a Flexible Content Field via `addLayout`, the Field Groups name (which becomes the Layout's name) will be used to namespace the fields.
