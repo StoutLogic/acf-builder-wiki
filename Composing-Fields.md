@@ -75,30 +75,3 @@ $aboutSections
 One thing to keep in mind is that the FieldsBuilder is mutable. Meaning that when addField or setConfig is called, it changes the object in place. Calling `build` on a FieldsBuilder will not _lock in_ the fields or config. `build` only outputs a config array for the FieldsBuilder at that particular moment in time. So the array is _locked in_ but the FieldsBuilder is not.
 
 When adding a FieldsBuilder to another FieldsBuilder with `addFields` or `addLayout`, that FieldsBuilder is cloned, which will _lock in_ the fields and configs. So updating those fields at a later time on the original FieldsBuilder will not have an effect on the cloned versions. These cloned copies embedded in other FieldsBuilder can still be updated separately, so they are still mutable.
-
-## Generated Keys
-In ACF, a Field's key needs to be unique. Keys are used in the admin forms, as the form field names. If two form field have the same name, only one field (the one appearing last) gets saved.
-
-ACF solves this issue when using the UI by randomly generating the keys so they are unique. ACF Builder solves this by namespacing a field's key by its parent field groups.
-
-For example:
-```php
-$builder = new FieldsBuilder('page_content');
-$builder->addFlexibleContent('sections')
-              ->addLayout('banner')
-                  ->addText('title')
-                  ->addWysiwyg('content')
-              ->addLayout('content_columns')
-                  ->addRepeater('columns', ['min' => 1, 'max' => 2])
-                      ->addWysiwyg('content');
-```
-
-The group's key will become: `group_page_content`.
-The flexible content areas `sections` key will become: `field_page_content_sections`
-The layout banner key will become: `field_page_content_sections_banner`
-And the title field's key in the banner will become: `field_page_content_sections_banner_title`
-The last field in the above example will have the key: `field_page_content_sections_content_columns_columns_content`
-
-This provides a logical semantic naming scheme for keys. They will be unique because the names of fields need to be unique. It mirrors how ACF stores fields name in the database.
-
-A user of ACF Builder shouldn't have to worry about key names, but if the user ever needs to know what the key for a particular field is, they should be able to logically deduce it.
