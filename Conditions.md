@@ -22,13 +22,13 @@ $banner
     ->addImage('background_image')
     ->addTrueFalse('add_title')
     ->addText('title')
-        ->condition('add_title', '==', '1')
+        ->conditional('add_title', '==', '1')
     ->addRadio('title_color')
         ->addChoices('black', 'white')
-        ->condition('add_title', '==', '1')
+        ->conditional('add_title', '==', '1')
     ->addRadio('title_background_color')
         ->addChoices(['transparent' => 'none'], 'black')
-        ->condition('add_title', '==', '1')
+        ->conditional('add_title', '==', '1')
             ->and('title_color', '==', 'white');
 ```
 This will display the Title Background Options only if a title is available and the title text color is white.  The logic probably won't be as complex as field group locations logic, but it is there if needed.
