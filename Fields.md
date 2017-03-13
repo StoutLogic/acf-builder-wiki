@@ -1,13 +1,13 @@
 # Fields
 Fields are very easy to add to a field group. There is very general 
 ```php
-$builder->addField($name, $config = []);
+$builder->addField($name, $type, $config = []);
 ```
-method that will accept a name (to be in lowercase and underscores) and an array of field configurations that can be found on the [ACF register fields via PHP page](https://www.advancedcustomfields.com/resources/register-fields-via-php/#field-settings). If you don't specify a type option, ACF will default to a normal text field.
+method that will accept a `name` (to be in lowercase and underscores), the `type` of field, and an array of field `configurations` that can be found on the [ACF register fields via PHP page](https://www.advancedcustomfields.com/resources/register-fields-via-php/#field-settings). 
 
-Luckily the ACF Builder library provides a number of self descriptive shortcut functions for adding different field types. The best way to see all the available field type functions in the [FieldsBuilder.php](https://github.com/StoutLogic/acf-builder/blob/master/src/FieldsBuilder.php#L142) class file, and their options correlate to those [defined by ACF](https://www.advancedcustomfields.com/resources/register-fields-via-php/#field-settings)
+Luckily the ACF Builder library provides a number of self descriptive shortcut functions for adding different field types. The best way to see all the available field type functions in the [FieldsBuilder.php](https://github.com/StoutLogic/acf-builder/blob/master/src/FieldsBuilder.php#L215) class file, and their options correlate to those [defined by ACF](https://www.advancedcustomfields.com/resources/register-fields-via-php/#field-settings)
 
-If you're using a 3rd party ACF plugin that adds additional field types, you can just use the generic `addField` function and pass the field type to the `$args` array.
+If you're using a 3rd party ACF plugin that adds additional field types, you can just use the generic `addField` function and pass in the field type.
 
 ## Sample
 ```php
