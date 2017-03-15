@@ -41,7 +41,8 @@ $banner
     ->addChoice('yellow', 'Yellow');
 ```
 ## Shorthand for adding multiple choices
-Another option is to use the `addChoices` method to quickly add 1 or more choices. Just pass in multiple arguments for each choice. Or pass in a [key => value] array if you want to specify a label.
+Another option is to use the `addChoices` method to quickly add 1 or more choices. Just pass in multiple arguments for each choice. Or pass in a `[key => value]` array to represent `['choice' => 'label']` if you want to specify a label.
+
 ```php
 $banner
     ->addRadio('background_color')
