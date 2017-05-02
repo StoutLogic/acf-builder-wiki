@@ -59,9 +59,9 @@ The `type` setting is automatically generated based on the `addField` method use
 We also passed in some optional configuration arguments for each field. Including overwriting the default label for the `background_fixed` field.
 
 Some of these configurations are very often used, so there are some declarative shortcut functions for them. They are:
-* `defaultValue($value)`
-* `required($value = true)` true by default, pass in false to unrequire it
-* `instructions($value)`
+* `setDefaultValue($value)`
+* `setRequired($value = true)` true by default, pass in false to unrequire it
+* `setInstructions($value)`
 
 The above can be rewritten to be:
 ```php
@@ -71,8 +71,8 @@ $background = new FieldsBuilder('background');
 $background
     ->addImage('background_image', ['preview_size' => 'medium'])
     ->addTrueFalse('background_fixed', ['label' => 'Fixed'])
-        ->instructions("Check to add a parallax effect where the background image doesn't move when scrolling")
+        ->setInstructions("Check to add a parallax effect where the background image doesn't move when scrolling")
     ->addColorPicker('background_color')
-        ->defaultValue('#ffffff');
+        ->setDefaultValue('#ffffff');
 ```
 Any field configuration in this style using `setConfig($key, $value)` This is useful if the field was already declared and you wanted to change the configuration.
