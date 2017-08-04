@@ -14,7 +14,7 @@ $banner
         ->addChoice('red')
         ->addChoice('blue')
         ->addChoice('green')
-        ->defaultValue('blue');
+        ->setDefaultValue('blue');
 ```
 `$banner->build();` will generate:
 ```php
