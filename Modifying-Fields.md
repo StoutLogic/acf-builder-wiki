@@ -19,13 +19,17 @@ $builder = new FieldsBuilder('Banner');
 
     $builder
         ->modifyField('title', function($fieldsBuilder) {
-            return $fieldsBuilder
+            $fieldsBuilder
                 ->setConfig('label', 'Banner Title')
                 ->addText('sub_title');
+
+            // Return explicitly, because the `addText` method returns a FieldBuilder (singular)
+            // object, not the required FieldsBuilder (plural)
+            return $fieldsBuilder;
         })
         ->addTextarea('footnotes');
 ```
-The closure must except a new `FieldsBuilder` object which will have the field 'title' already initialized as the only field. From their, the field's configuration can be modified, as well as fields added after it. This function also must return a `FieldsBuilder`. The original `title` field will have its contents replaced with these built fields. 
+The closure must accept a new `FieldsBuilder` object which will have the field 'title' already initialized as the only field. From their, the field's configuration can be modified, as well as fields added after it. This function also must return a `FieldsBuilder`. The original `title` field will have its contents replaced with these built fields. 
 
 `modifyField` will return an instance to the original builder, so additional fields can be added after `content`, in this case a `footnotes` textarea.
 
