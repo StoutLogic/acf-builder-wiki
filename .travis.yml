@@ -1,12 +1,15 @@
 script:
-- |
+- |-
   git config user.name "stevep"
   git config user.email "steve@stoutlogic.com"
   git remote remove origin
-  git remote add origin https://$GITHUB_API_KEY@github.com/Tyriar/wiki-sync-example-wiki.git > /dev/null 2>&1
-  git remote add upstream https://$GITHUB_API_KEY@github.com/Tyriar/wiki-sync-example.wiki.git > /dev/null 2>&1
+  git remote add origin https://$GITHUB_API_KEY@github.com/stoutlogic/acf-builder-wiki.git > /dev/null 2>&1
+  git remote add upstream https://$GITHUB_API_KEY@github.com/stoutlogic/acf-builder-wiki.git > /dev/null 2>&1
   git fetch origin
   git fetch upstream
   git merge upstream/master --no-edit
   git push origin HEAD:master > /dev/null 2>&1
   git push upstream HEAD:master > /dev/null 2>&1
+env:
+  matrix:
+    secure: PtpwmSvbpDTE6f90NlGhvLdg6zNCAlvvaEEfA2BnbcTHs7f5XIH6SGziNG746eevHG/taY2LoBWqp9gg0YB9v2eD9gF6QKbB5X+5TuoyIRQRMYnqMZCpJJBC+51H6HQD5CcgR1g13qyfFvnZ5+MEYvmiuri5ictuZNNE6BXvJMqdgNz60sKXFlWYG8dlNTBtD8OZDhImviBJhosIYyczusSN6N4XmJsGif9/TziifBt3Dag4fHBgyGuxwTGiORh3zA5EaVEwRYbi4ou+IT03WhjYVMgrio38L3oanuupJva27L3zddAWuQh3GWvAEYrnZX5O7QuF0CldIsse2N3ydonmHKHEMR+D+4k0ealBSMgNy6cPzmJU4MzbBxLXLfzxZbr/mu31VZ73VS7wOIrzub/kQkeY1mSXTSqclhu7R4H4GP4VlJg5KnFBFoohI/XSlUAZQstty1rmh8xZ74HAYIOzRxK8/1VsZJqm2U1C8HMxPIknuSo6ntnxSFjPZCaCApAHjhpQ5g5mlGtkE7FlPtsFJdIMnBQAu8erRf8h6GlTUkFr3Ppg4Yic5b7rGuabVzMfnUIpV7+tMzePdRAcMRF3VAwN/VjTuWGfdBZLKGLMl98Br8JCFTjMBcZcuAf14HdY5+EIgYG1nJtOAC3UNE6ZhOS8LuSnrRIcUPYsKUs=
