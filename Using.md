@@ -20,3 +20,8 @@ add_action('acf/init', function() use ($banner) {
    acf_add_local_field_group($banner->build());
 });
 ```
+
+## Saving to Admin Panel
+Adding fields via the `acf_add_local_field_group` will mean they show up where you specified in `setLocation`, you cannot see them on the Custom Fields panel within the WordPress back-end. 
+
+A workaround for this is simply by creating a /acf-json/ directory in the root of your theme ([more here](https://www.advancedcustomfields.com/resources/local-json/)) and using `acf_write_json_field_group` instead. This will save the new fields to a .json file that you can then sync from the Custom Fields panel.
