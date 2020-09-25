@@ -579,7 +579,7 @@ $fields
 ### Message 
 ```php 
 $fields 
-    ->addMessage('message_field', [
+    ->addMessage('message_field', 'Message', [
         'label' => 'Message Field',
         'instructions' => '',
         'required' => 0,
