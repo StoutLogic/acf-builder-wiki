@@ -5,7 +5,7 @@
 ### Text 
 ```php
 $fields
-    ->addText('text_field' [
+    ->addText('text_field', [
         'label' => 'Text Field',
         'instructions' => '',
         'required' => 0,
