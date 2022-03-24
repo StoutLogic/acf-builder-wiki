@@ -478,7 +478,7 @@ $fields
         'multiple' => 0,
     ]);
 ```
-[Official Documentation](https://www.advancedcustomfields.com/resources/textarea)
+[Official Documentation](https://www.advancedcustomfields.com/resources/user)
 
 ## Miscellaneous
 
@@ -557,6 +557,7 @@ $fields
         'return_format' => 'g:i a',
     ]);
 ```
+[Official Documentation](https://www.advancedcustomfields.com/resources/time-picker)
 
 ### Color Picker 
 ```php
@@ -574,7 +575,7 @@ $fields
         'default_value' => '',
     ]);
 ```
-[Official Documentation](https://www.advancedcustomfields.com/resources/textarea)
+[Official Documentation](https://www.advancedcustomfields.com/resources/color-picker)
 
 ### Message 
 ```php 
