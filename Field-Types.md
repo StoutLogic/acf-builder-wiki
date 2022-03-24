@@ -478,7 +478,7 @@ $fields
         'multiple' => 0,
     ]);
 ```
-[Official Documentation](https://www.advancedcustomfields.com/resources/textarea)
+[Official Documentation](https://www.advancedcustomfields.com/resources/user)
 
 ## Miscellaneous
 
