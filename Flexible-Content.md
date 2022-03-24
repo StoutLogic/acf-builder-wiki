@@ -13,7 +13,7 @@ $content
             ->addRepeater('columns', ['min' => 1, 'max' => 2])
                 ->addWysiwyg('content');
 ```
-Flexible Contents `"Add Row"` button can be customized, by passing in a `button` key/val argument in the second parameter. By default, ACF Builder will singularize the Flexible Content name. So in the above example, the button `"Add Section"` would automatically be generated if a `button` argument wasn't manually passed in.
+Flexible Contents `"Add Row"` button can be customized, by passing in a `button_label` key/val argument in the second parameter. By default, ACF Builder will singularize the Flexible Content name. So in the above example, the button `"Add Section"` would automatically be generated if a `button` argument wasn't manually passed in.
 
 Adding a layout is essentially the same as adding an entire FieldGroup, but you can pass some additional arguments such as `min`, `max` and `display`, like a repeater. `display` will default to `"block"`. 
 
