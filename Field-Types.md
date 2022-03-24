@@ -575,7 +575,7 @@ $fields
         'default_value' => '',
     ]);
 ```
-[Official Documentation](https://www.advancedcustomfields.com/resources/textarea)
+[Official Documentation](https://www.advancedcustomfields.com/resources/color-picker)
 
 ### Message 
 ```php 
