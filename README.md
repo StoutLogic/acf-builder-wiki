@@ -1,5 +1,5 @@
 # ACF Builder Wiki
-Git Repository for the [ACF Builder documenation](https://github.com/StoutLogic/acf-builder/wiki)
+Git Repository for the [ACF Builder documentation](https://github.com/StoutLogic/acf-builder/wiki)
 
 [![Build Status](https://travis-ci.org/StoutLogic/acf-builder-wiki.svg?branch=master)](https://travis-ci.org/StoutLogic/acf-builder-wiki)
 
