@@ -56,6 +56,7 @@ $slider
             'max' => 7,
             'button_label' => 'Add Slide',
             'layout' => 'block',
+            'collapsed' => 'title',
           ])
         ->addText('title')
         ->addWysiwyg('content');
